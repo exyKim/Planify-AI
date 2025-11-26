@@ -1,0 +1,78 @@
+/* To do list */
+
+.todo-list-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #A1A3A9; /* 요청한 선 */
+}
+
+.todo-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.todo-text {
+  font-size: 18px;
+  color: #4E515A;
+}
+
+.todo-text.done {
+  color: #A1A3A9;
+  text-decoration: line-through;
+}
+
+.todo-text {
+  font-size: 18px;
+  color: #8C8F95; /* 기본 텍스트 색 */
+}
+
+.todo-text.done {
+  color: #8C8F95; /* 회색 글씨 */
+  text-decoration: none; /* 혹시 줄 생기지 않게 */
+}
+
+/* 두 열로 나누기 */
+/* 두 열 그리드 + 스크롤 지원 */
+.todo-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 40px;
+  
+  max-height: 350px; /* 원하는 높이로 조절 가능 */
+  overflow-y: auto;
+
+  padding-right: 6px; /* 스크롤바 겹침 방지 */
+}
+
+
+/* 각 아이템은 여전히 flex */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #A1A3A9;
+}
+
+.todo-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.todo-text {
+  font-size: 18px;
+  color: #8C8F95;
+}
+
+.todo-text.done {
+  color: #8C8F95;
+}

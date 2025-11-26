@@ -1,0 +1,107 @@
+/* -----------------------------
+   MODAL OVERLAY
+----------------------------- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* -----------------------------
+   MODAL BOX
+----------------------------- */
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  color: #8EB8BD;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-subtitle {
+  color: #8EB8BD;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* -----------------------------
+   RADIO
+----------------------------- */
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #2ED9E8;
+}
+
+/* -----------------------------
+   INPUT
+----------------------------- */
+
+.modal-input {
+  padding: 0.8rem;
+  border: 1px solid #040404;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* -----------------------------
+   BUTTONS
+----------------------------- */
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modal-button {
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #E4FCFF;
+  color: #197780;
+}
+
+.done-button {
+  background-color: #2ED9E8;
+  color: white;
+}

@@ -1,0 +1,310 @@
+.calendar-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 600px;
+  background-color: #ABDCE1;
+  padding: 1rem;
+  color: #E2FAFD;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  width: 170px;
+  z-index: 1000;
+}
+
+.reminder-title {
+  font-size: 2rem;
+  margin-top: 10rem;
+  font-weight: 600;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.main-content {
+  flex: 1;
+  background-color: white;
+  padding: 2rem;
+  display: flex;            
+  flex-direction: column;   
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.date-navigation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-top: 3.5rem;
+  align-items: center;
+  gap: 2rem;
+  color: #8EB8BD;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.add-btn {
+  background-color: #A2D1D5;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: auto;
+  margin-top: 3.5rem;
+}
+
+.calendar-grid {
+  flex: 2;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: #A1A3A9;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.weekday-item {
+  position: relative;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.date-container {
+  align-self: center;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  width: 60px;
+  height: 70px;
+  justify-content: center;
+}
+
+.date-container.today {
+  background-color: #D5FBFF;
+}
+
+.day-name {
+  color: #8EB8BD;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.day-number {
+  color: #A1A3A9;
+  font-size: 1.1rem;
+}
+
+.timeline {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 140px;          /* ← 일정 박스 전체 width 고정 */
+  align-items: center;
+}
+
+.schedule-item {
+  width: 120px;          /* ← 고정된 일정 width */
+  height: 32px;
+  line-height: 32px;
+  padding: 0 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* A type 일정 */
+.schedule-item.A {
+  background-color: #F9FFC5;
+  color: #8B983D;
+}
+
+/* T type 일정 */
+.schedule-item.T {
+  background-color: #E2ECFF;
+  color: #6F9FA5;
+}
+
+/* Highlight(더블클릭) */
+.schedule-item.highlight {
+  background-color: #616161 !important;
+  color: #D7D7D7 !important;
+}
+
+.reminder-list {
+  margin-top: 2rem;
+  padding: 0 3rem 1.5rem;  
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;               
+  overflow-y: auto;       
+  box-sizing: border-box;
+}
+
+.reminder-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background: transparent !important;
+  box-shadow: none;
+  padding-left: 0;
+}
+
+.reminder-dday {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  font-size: 1.2rem;
+}
+
+.reminder-dday.dd-0 {
+  background: #FFE2E2;
+  color: #FF0000;
+}
+.reminder-dday.dd-1 {
+  background: #FFFFE4;
+  color: #F0A500;
+}
+.reminder-dday.dd-2 {
+  background: #C0FFCF;
+  color: #00BB25;
+}
+
+.reminder-content {
+  color: #237C84;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.todo-toggle-btn {
+  background: none;
+  border: none;
+  color: #4E515A;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.todo-toggle-btn:hover {
+  opacity: 0.7;
+}
+
+.todo-divider {
+  width: 100%;
+  height: 0.8px;
+  background-color: #A0D6DB;  /* 네가 말한 색 */
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 날짜 전체 묶음 */
+.todo-date-display {
+  padding-left: 3rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+
+}
+
+/* 왼쪽 큰 날짜 숫자 */
+.todo-date-left {
+  font-size: 44px;
+  font-weight: 600;
+  color: #A1A3A9;   /* 네가 말한 동일 색 */
+  line-height: 1;
+}
+
+/* 오른쪽 연도 + 월 */
+.todo-date-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  color: #A1A3A9;
+  line-height: 1.1;
+}
+
+.todo-section {
+  flex: 1;              /* 🔥 핵심: 남은 공간을 모두 차지 */
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}
+
+.day-button:hover {
+  opacity: 0.8;
+}
+
+.timeline, 
+.schedule-item, 
+.schedule-item * {
+  user-select: none;      /* 텍스트 선택 비활성화 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

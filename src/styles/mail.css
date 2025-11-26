@@ -1,0 +1,158 @@
+/* -----------------------------
+   OVERLAY
+----------------------------- */
+.mail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+}
+
+/* -----------------------------
+   MODAL BOX
+----------------------------- */
+.mail-modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mail-title {
+  color: #8EB8BD;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mail-subtitle {
+  color: #8EB8BD;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* -----------------------------
+   FORM
+----------------------------- */
+.mail-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mail-input {
+  padding: 0.8rem;
+  border: 1px solid #6eb6ab;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.mail-textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* -----------------------------
+   BUTTONS
+----------------------------- */
+.mail-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mail-button {
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cancel-mail {
+  background-color: #E4FCFF;
+  color: #197780;
+}
+
+.done-mail {
+  background-color: #70b4ba;
+  color: white;
+}
+
+
+/* -----------------------------
+   MAIL FLOATING BUTTON
+----------------------------- */
+.mail-floating-btn {
+  position: fixed;
+  bottom: 30px;
+  width: 40px;
+  height: auto;
+  left: 25px;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  z-index: 1300;
+  transition: transform 0.15s ease;
+}
+
+.mail-floating-btn:hover {
+  transform: scale(1.05);
+}
+
+/* -----------------------------
+   LOADING
+----------------------------- */
+.mail-loading {
+  font-size: 1.2rem;
+  color: #8EB8BD;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* -----------------------------
+   RESULT BOX
+----------------------------- */
+.mail-result-box {
+  background: #F4FEFF;
+  padding: 1rem;
+  border-radius: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+.mail-result-title {
+  color: #2ED9E8;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.mail-result-body {
+  white-space: pre-wrap;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* -----------------------------
+   COPY BUTTON
+----------------------------- */
+.mail-copy-btn {
+  background: #E2FAFD;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mail-copy-btn img {
+  width: 22px;
+  height: 22px;
+}
